@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tema2Exercici2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center"
+            >
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Nivel de idiomas"
+                 Style="{StaticResource Headline}"       
+                />
+
+            <Label
+                Text="B: bajo, M: medio, A: alto"
+                 Style="{StaticResource Headline}"
+                FontSize="20"
+                />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Text="B: bajo, M: medio, A: alto"
+                     Style="{StaticResource Headline}"
+                    FontSize="20"
+                    />
+                <Entry
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    >
+                    
+                </Entry>
+
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Text="Avanzado 2" 
+                    Clicked="btnAvanzado2"
+                    HorizontalOptions="Fill" />
+
+
+            </Grid>
+            
+
+            <Button
+               
+                Text="Comprobar" 
+                Clicked="btnComprobar"
+                HorizontalOptions="Fill" />
+                     
+            <HorizontalStackLayout>
+                <Button
+                    
+                    Text="Avanzado 1" 
+                    Clicked="btnAvanzado1"
+                    HorizontalOptions="Fill" />
+
+                <Button
+                    
+                    Text="Avanzado 2" 
+                    Clicked="btnAvanzado2"
+                    HorizontalOptions="Fill" />
+
+                <Button
+                   
+                    Text="Avanzado 3" 
+                    Clicked="btnAvanzado3"
+                    HorizontalOptions="Fill" />
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="tvNumeroIdiomas"
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button
+                
+                Text="Ver créditos" 
+                Clicked="btnCreditos"
+                HorizontalOptions="Fill" />
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
