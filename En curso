@@ -9,11 +9,6 @@
             Spacing="25"
             VerticalOptions="Center"
             >
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
                 Text="Nivel de idiomas"
@@ -26,7 +21,7 @@
                 FontSize="20"
                 />
 
-            <Grid>
+            <Grid VerticalOptions="Center" Margin="0,0,0,0" WidthRequest="770">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
                     <RowDefinition Height="*" />
@@ -46,71 +41,200 @@
 
 
                 <Label
+
                     Grid.Row="1"
                     Grid.Column="1"
-                    Text="B: bajo, M: medio, A: alto"
+                    Text="NIvel de Valenciano: "
                      Style="{StaticResource Headline}"
                     FontSize="20"
                     />
                 <Entry
+                    x:Name="entry1"
                     Grid.Row="1"
                     Grid.Column="2"
+                   IsReadOnly="True"
+                    WidthRequest="70"
                     >
-                    
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="Text" Value="A">
+                            <Setter Property="BackgroundColor" Value="LightGreen"></Setter>
+                        </Trigger>
+                        <Trigger TargetType="Entry" Property="Text" Value="B">
+                            <Setter Property="BackgroundColor" Value="Red"></Setter>
+                            <Setter Property="TextColor" Value="White"></Setter>
+                        </Trigger>
+                        <Trigger TargetType="Entry" Property="Text" Value="M">
+                            <Setter Property="BackgroundColor" Value="Orange"></Setter>
+                        </Trigger>
+                    </Entry.Triggers>
                 </Entry>
-
                 <Button
                     Grid.Row="1"
                     Grid.Column="3"
-                    Text="Avanzado 2" 
-                    Clicked="btnAvanzado2"
-                    HorizontalOptions="Fill" />
+                    Text="Insertar" 
+                    Clicked="btnInsertar1"
+                    HorizontalOptions="Fill" 
+                    WidthRequest="150"
+                    />
 
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Text="NIvel de Valenciano: "
+                     Style="{StaticResource Headline}"
+                    FontSize="20"
+                    />
+                <Entry
+                    x:Name="entry2"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    IsReadOnly="True"
+                    WidthRequest="70"
+                    >
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="Text" Value="A">
+                            <Setter Property="BackgroundColor" Value="LightGreen"></Setter>
+                        </Trigger>
+                        <Trigger TargetType="Entry" Property="Text" Value="B">
+                            <Setter Property="BackgroundColor" Value="Red"></Setter>
+                            <Setter Property="TextColor" Value="White"></Setter>
+                        </Trigger>
+                        <Trigger TargetType="Entry" Property="Text" Value="M">
+                            <Setter Property="BackgroundColor" Value="Orange"></Setter>
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Text="Insertar" 
+                    Clicked="btnInsertar2"
+                    HorizontalOptions="Fill"
+                    WidthRequest="150"
+                    />
+
+
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Text="NIvel de Valenciano: "
+                     Style="{StaticResource Headline}"
+                    FontSize="20"
+                    />
+                 <Entry
+                     x:Name="entry3"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                     IsReadOnly="True"
+                     WidthRequest="70"
+                    >
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="Text" Value="A">
+                            <Setter Property="BackgroundColor" Value="LightGreen"></Setter>
+                        </Trigger>
+                        <Trigger TargetType="Entry" Property="Text" Value="B">
+                            <Setter Property="BackgroundColor" Value="Red"></Setter>
+                            <Setter Property="TextColor" Value="White"></Setter>
+                        </Trigger>
+                        <Trigger TargetType="Entry" Property="Text" Value="M">
+                            <Setter Property="BackgroundColor" Value="Orange"></Setter>
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Text="Insertar" 
+                    Clicked="btnInsertar3"
+                    HorizontalOptions="Fill" 
+                    WidthRequest="150"
+                    />
 
             </Grid>
-            
+
 
             <Button
-               
+               x:Name="btnComprobarName"
                 Text="Comprobar" 
+                
                 Clicked="btnComprobar"
-                HorizontalOptions="Fill" />
-                     
-            <HorizontalStackLayout>
+                HorizontalOptions="Fill" 
+                WidthRequest="170"
+                Margin="0,-70,0,10"
+                >
+                
+
+            </Button>
+
+            <HorizontalStackLayout HorizontalOptions="Center" >
                 <Button
-                    
+                    x:Name="btnAvanzado1"
                     Text="Avanzado 1" 
-                    Clicked="btnAvanzado1"
-                    HorizontalOptions="Fill" />
+                    Margin="0,0,17,0"
+                    IsEnabled="False"
+                    HorizontalOptions="Fill" 
+                    >
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="1">
+                            <Setter Property="IsEnabled" Value="True" />
+                        </DataTrigger>
+                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="0">
+                            <Setter Property="IsEnabled" Value="False" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
 
                 <Button
-                    
+                    x:Name="btnAvanzado2"
                     Text="Avanzado 2" 
-                    Clicked="btnAvanzado2"
-                    HorizontalOptions="Fill" />
+                    Margin="0,0,17,0"
+                    IsEnabled="False"
+                    HorizontalOptions="Fill" 
+                    >
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="2">
+                            <Setter Property="IsEnabled" Value="True" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
 
                 <Button
-                   
-                    Text="Avanzado 3" 
-                    Clicked="btnAvanzado3"
-                    HorizontalOptions="Fill" />
+                    x:Name="btnAvanzado3"
+                    Text="Avanzado 3"                   
+                    IsEnabled="False"
+                    HorizontalOptions="Fill" 
+                    >
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="3">
+                            <Setter Property="IsEnabled" Value="True" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
             </HorizontalStackLayout>
 
             <Label
                 x:Name="tvNumeroIdiomas"
-                Text="Hello, World!"
+                Text="Idiomas a nivel avanzado: __"
+                FontSize="20"
                 Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                />
 
             <Button
                 
                 Text="Ver créditos" 
                 Clicked="btnCreditos"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill" 
+                WidthRequest="170"
+                />
 
 
+          
 
+        </VerticalStackLayout>
+    </ScrollView>
 
+</ContentPage>
 
         </VerticalStackLayout>
     </ScrollView>
