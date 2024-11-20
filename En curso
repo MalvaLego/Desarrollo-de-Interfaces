@@ -1,241 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tema2Exercici2.MainPage">
+             x:Class="SQLite03.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
             Spacing="25"
-            VerticalOptions="Center"
-            >
+            Padding="30,0"
+            VerticalOptions="Start">
+            <Label FontSize="Header"
+                   Text="Empleados" />
 
-            <Label
-                Text="Nivel de idiomas"
-                 Style="{StaticResource Headline}"       
-                />
+            <Label FontSize="20"
+                    Text="Nombre:" />
 
-            <Label
-                Text="B: bajo, M: medio, A: alto"
-                 Style="{StaticResource Headline}"
-                FontSize="20"
-                />
-
-            <Grid VerticalOptions="Center" Margin="0,0,0,0" WidthRequest="770">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="2*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition />
-                    <RowDefinition Height="100" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition />
-                    <ColumnDefinition Width="100" />
-                </Grid.ColumnDefinitions>
-
-
-                <Label
-
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    Text="NIvel de Valenciano: "
-                     Style="{StaticResource Headline}"
-                    FontSize="20"
-                    />
-                <Entry
-                    x:Name="entry1"
-                    Grid.Row="1"
-                    Grid.Column="2"
-                   IsReadOnly="True"
-                    WidthRequest="70"
-                    >
-                    <Entry.Triggers>
-                        <Trigger TargetType="Entry" Property="Text" Value="A">
-                            <Setter Property="BackgroundColor" Value="LightGreen"></Setter>
-                        </Trigger>
-                        <Trigger TargetType="Entry" Property="Text" Value="B">
-                            <Setter Property="BackgroundColor" Value="Red"></Setter>
-                            <Setter Property="TextColor" Value="White"></Setter>
-                        </Trigger>
-                        <Trigger TargetType="Entry" Property="Text" Value="M">
-                            <Setter Property="BackgroundColor" Value="Orange"></Setter>
-                        </Trigger>
-                    </Entry.Triggers>
-                </Entry>
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="3"
-                    Text="Insertar" 
-                    Clicked="btnInsertar1"
-                    HorizontalOptions="Fill" 
-                    WidthRequest="150"
-                    />
-
-
-                <Label
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    Text="NIvel de Valenciano: "
-                     Style="{StaticResource Headline}"
-                    FontSize="20"
-                    />
-                <Entry
-                    x:Name="entry2"
-                    Grid.Row="2"
-                    Grid.Column="2"
-                    IsReadOnly="True"
-                    WidthRequest="70"
-                    >
-                    <Entry.Triggers>
-                        <Trigger TargetType="Entry" Property="Text" Value="A">
-                            <Setter Property="BackgroundColor" Value="LightGreen"></Setter>
-                        </Trigger>
-                        <Trigger TargetType="Entry" Property="Text" Value="B">
-                            <Setter Property="BackgroundColor" Value="Red"></Setter>
-                            <Setter Property="TextColor" Value="White"></Setter>
-                        </Trigger>
-                        <Trigger TargetType="Entry" Property="Text" Value="M">
-                            <Setter Property="BackgroundColor" Value="Orange"></Setter>
-                        </Trigger>
-                    </Entry.Triggers>
-                </Entry>
-                <Button
-                    Grid.Row="2"
-                    Grid.Column="3"
-                    Text="Insertar" 
-                    Clicked="btnInsertar2"
-                    HorizontalOptions="Fill"
-                    WidthRequest="150"
-                    />
-
-
-                <Label
-                    Grid.Row="3"
-                    Grid.Column="1"
-                    Text="NIvel de Valenciano: "
-                     Style="{StaticResource Headline}"
-                    FontSize="20"
-                    />
-                 <Entry
-                     x:Name="entry3"
-                    Grid.Row="3"
-                    Grid.Column="2"
-                     IsReadOnly="True"
-                     WidthRequest="70"
-                    >
-                    <Entry.Triggers>
-                        <Trigger TargetType="Entry" Property="Text" Value="A">
-                            <Setter Property="BackgroundColor" Value="LightGreen"></Setter>
-                        </Trigger>
-                        <Trigger TargetType="Entry" Property="Text" Value="B">
-                            <Setter Property="BackgroundColor" Value="Red"></Setter>
-                            <Setter Property="TextColor" Value="White"></Setter>
-                        </Trigger>
-                        <Trigger TargetType="Entry" Property="Text" Value="M">
-                            <Setter Property="BackgroundColor" Value="Orange"></Setter>
-                        </Trigger>
-                    </Entry.Triggers>
-                </Entry>
-                <Button
-                    Grid.Row="3"
-                    Grid.Column="3"
-                    Text="Insertar" 
-                    Clicked="btnInsertar3"
-                    HorizontalOptions="Fill" 
-                    WidthRequest="150"
-                    />
-
-            </Grid>
-
-
-            <Button
-               x:Name="btnComprobarName"
-                Text="Comprobar" 
+            <Entry WidthRequest="400" VerticalOptions="Start"
+                   
+                   >
                 
-                Clicked="btnComprobar"
-                HorizontalOptions="Fill" 
-                WidthRequest="170"
-                Margin="0,-70,0,10"
-                >
-                
+            </Entry>
 
+            <Label FontSize="20"
+                   Text="Apellido:" />
+
+            <Entry WidthRequest="400" VerticalOptions="Start">
+
+            </Entry>
+
+            <Button x:Name="btnAnyadir"
+                    Text="Añadir">
+                    
             </Button>
 
-            <HorizontalStackLayout HorizontalOptions="Center" >
-                <Button
-                    x:Name="btnAvanzado1"
-                    Text="Avanzado 1" 
-                    Margin="0,0,17,0"
-                    IsEnabled="False"
-                    HorizontalOptions="Fill" 
-                    >
-                    <Button.Triggers>
-                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="1">
-                            <Setter Property="IsEnabled" Value="True" />
-                        </DataTrigger>
-                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="0">
-                            <Setter Property="IsEnabled" Value="False" />
-                        </DataTrigger>
-                    </Button.Triggers>
-                </Button>
 
-                <Button
-                    x:Name="btnAvanzado2"
-                    Text="Avanzado 2" 
-                    Margin="0,0,17,0"
-                    IsEnabled="False"
-                    HorizontalOptions="Fill" 
-                    >
-                    <Button.Triggers>
-                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="2">
-                            <Setter Property="IsEnabled" Value="True" />
-                        </DataTrigger>
-                    </Button.Triggers>
-                </Button>
-
-                <Button
-                    x:Name="btnAvanzado3"
-                    Text="Avanzado 3"                   
-                    IsEnabled="False"
-                    HorizontalOptions="Fill" 
-                    >
-                    <Button.Triggers>
-                        <DataTrigger TargetType="Button" Binding="{Binding Contador}" Value="3">
-                            <Setter Property="IsEnabled" Value="True" />
-                        </DataTrigger>
-                    </Button.Triggers>
-                </Button>
-            </HorizontalStackLayout>
-
-            <Label
-                x:Name="tvNumeroIdiomas"
-                Text="Idiomas a nivel avanzado: __"
-                FontSize="20"
-                Style="{StaticResource Headline}"
-                />
-
-            <Button
-                
-                Text="Ver créditos" 
-                Clicked="btnCreditos"
-                HorizontalOptions="Fill" 
-                WidthRequest="170"
-                />
-
-
-          
-
-        </VerticalStackLayout>
-    </ScrollView>
-
-</ContentPage>
-
+                <CollectionView ItemsSource="{Binding OcTrabajadores}"
+                            SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal"
+                                     Padding="10">
+                            <!-- Muestra nombre -->
+                            <Label Text="{Binding Nombre}"
+                                   FontSize="Medium"
+                                   VerticalOptions="Center" />
+                            <!-- Muestra apellidos  -->
+                            <Label Text="{Binding Apellidos}"
+                                   FontSize="Medium"
+                                   VerticalOptions="Center"
+                                   Margin="10,0,0,0" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
     </ScrollView>
 
