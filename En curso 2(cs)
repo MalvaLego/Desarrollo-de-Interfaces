@@ -5,18 +5,27 @@ namespace SQLite03
 {
     public partial class MainPage : ContentPage
     {
-        private List<Trabajador> _trabajadorList;
+        private List<Trabajador> _trabajadorList= new List<Trabajador>();
         private ObservableCollection<Trabajador> _ocTrabajadores;
         public ObservableCollection<Trabajador> OcTrabajadores
         {
-            get { return _ocTrabajadores; }
+            get { return _ocTrabajadores;}
             set
             {
                 _ocTrabajadores = value;
                 OnPropertyChanged();
             }
         }
-        
+        private Trabajador _trabajadorSelected;
+        public Trabajador TrabajadorSelected
+        {
+            get { return _trabajadorSelected; }
+            set
+            {
+                _trabajadorSelected = value;
+                OnPropertyChanged();
+            }
+        }
         public MainPage()
         {
             InitializeComponent();
@@ -60,7 +69,7 @@ namespace SQLite03
                 string sql = "SELECT * FROM Trabajador";
                 SQLiteCommand command = new SQLiteCommand(sql, connection);
                 SQLiteDataReader reader = command.ExecuteReader();
-
+                
                 // Recorremos los registros devueltos del SELECT
                 while (reader.Read())
                 {
@@ -83,7 +92,7 @@ namespace SQLite03
                 reader.Close();
                 connection.Close();
             }
-
+            
             BindingContext = this;
         }
 
@@ -98,11 +107,10 @@ namespace SQLite03
             EjecutarNonQuery(connection, queryCrearTablaTrabajador);
         }
 
-
+       
 
         private void InsertarDatosEjemplo(SQLiteConnection connection)
-        {
-            EjecutarNonQuery(connection, "insert into Trabajador (nombre, apellidos) values ('Ana', 'Gómez')");
+        {           
             EjecutarNonQuery(connection, "insert into Trabajador (nombre, apellidos) values ('Juan', 'Pérez')");
         }
 
@@ -143,7 +151,7 @@ namespace SQLite03
                 };
                 _trabajadorList.Add(nuevoTrabajador);
 
-               
+
 
                 connection.Close();
             }
@@ -162,8 +170,36 @@ namespace SQLite03
 
         private void Eliminar(object sender, EventArgs e)
         {
-            
+            if (TrabajadorSelected != null)
+            {
+                string rutaDirectorioApp = System.AppContext.BaseDirectory;
+                DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);
+                directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
+                string databasePath = Path.Combine(directorioApp.FullName, "empresa.db");
+                string connectionString = $"Data Source={databasePath};Version=3;";
+
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Query SQL para eliminar el trabajador de la base de datos
+                    string queryDelete = "DELETE FROM Trabajador WHERE id = @id";
+                    SQLiteCommand command = new SQLiteCommand(queryDelete, connection);
+
+                    // Agregar el parámetro (el ID del trabajador seleccionado)
+                    command.Parameters.AddWithValue("@id", TrabajadorSelected.Id);
+
+                    // Ejecutar la consulta DELETE
+                    command.ExecuteNonQuery();
+                }
+                OcTrabajadores.Remove(TrabajadorSelected);
+
+                TrabajadorSelected = null;
+            }
+
         }
+
+
 
 
 
