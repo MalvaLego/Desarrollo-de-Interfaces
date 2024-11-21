@@ -15,7 +15,7 @@
                     Text="Nombre:" />
 
             <Entry WidthRequest="400" VerticalOptions="Start"
-                   
+                   x:Name="etNombre"
                    >
                 
             </Entry>
@@ -23,18 +23,30 @@
             <Label FontSize="20"
                    Text="Apellido:" />
 
-            <Entry WidthRequest="400" VerticalOptions="Start">
+            <Entry WidthRequest="400" VerticalOptions="Start"
+                   x:Name="etApellido"
+                   >
 
             </Entry>
 
             <Button x:Name="btnAnyadir"
+                    Clicked="Anyadir"
                     Text="Añadir">
-                    
+            </Button>
+            <Button x:Name="btnActualizar"
+                    Clicked="Actualizar"
+                    Text="Actualizar">
+            </Button>
+            <Button x:Name="btnEliminar"
+                    Clicked="Eliminar"
+                    Text="Eliminar">  
             </Button>
 
 
-                <CollectionView ItemsSource="{Binding OcTrabajadores}"
-                            SelectionMode="Single">
+
+            <CollectionView ItemsSource="{Binding OcTrabajadores}"
+                            SelectionMode="Single"                         
+                            >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Horizontal"
