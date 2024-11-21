@@ -46,6 +46,7 @@
 
             <CollectionView ItemsSource="{Binding OcTrabajadores}"
                             SelectionMode="Single"                         
+                            SelectedItem="{Binding TrabajadorSelected, Mode=TwoWay}"
                             >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
