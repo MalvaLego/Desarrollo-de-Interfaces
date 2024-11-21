@@ -1,82 +1,171 @@
-using System.ComponentModel;
-using static System.Net.Mime.MediaTypeNames;
+using System.Collections.ObjectModel;
+using System.Data.SQLite;
 
-namespace Tema2Exercici2
+namespace SQLite03
 {
-    //[QueryProperty(nameof(Contador), "count")]
-    public partial class MainPage : ContentPage, INotifyPropertyChanged
+    public partial class MainPage : ContentPage
     {
-        int _count = 0;
-        public int Contador
+        private List<Trabajador> _trabajadorList;
+        private ObservableCollection<Trabajador> _ocTrabajadores;
+        public ObservableCollection<Trabajador> OcTrabajadores
         {
-            get => _count;
+            get { return _ocTrabajadores; }
             set
             {
-                if (_count != value)
-                {
-                    _count = value;
-                    OnPropertyChanged(nameof(Contador));
-                }
+                _ocTrabajadores = value;
+                OnPropertyChanged();
             }
         }
+        
         public MainPage()
         {
             InitializeComponent();
+            // Lista de los trabajadores
+            OcTrabajadores = new ObservableCollection<Trabajador>();
+
+
+            // Creamos la ruta de la base de datos en el directorio de nuestro proyecto
+            // No lo haríamos en producción pero en pruebas es más cómodo
+            // tener localizada la base de datos y poder examinarla
+            // con otros programas para ver los cambios producidos
+
+            // En mi caso, devuelve:
+            // "D:\\Datos\\proyectos_DI2425\\ud04part01ExempleSQLite\\SQLite03\\bin\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\AppX\\"
+            string rutaDirectorioApp = System.AppContext.BaseDirectory;
+
+            DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);
+
+            // El objeto directorio será ahora:
+            // D:\Datos\proyectos_DI2425\ud04part01ExempleSQLite\SQLite03
+            directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
+
+            // Creamos la ruta completa del fichero de la base de datos
+            // En mi ejemplo:
+            // D:\Datos\proyectos_DI2425\ud04part01ExempleSQLite\SQLite03\empresa.db
+            string databasePath = Path.Combine(directorioApp.FullName, "empresa.db");
+
+            // Creamos la cadena de conexión 
+            string connectionString = $"Data Source={databasePath};Version=3;";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                // Creamos la tabla de trabajador
+                CrearTablaTrabajador(connection);
+
+                // Insertamos unos registros de ejemplo
+                InsertarDatosEjemplo(connection);
+
+                // Creamos la consulta y la ejecutamos
+                string sql = "SELECT * FROM Trabajador";
+                SQLiteCommand command = new SQLiteCommand(sql, connection);
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                // Recorremos los registros devueltos del SELECT
+                while (reader.Read())
+                {
+                    int idTrabajador = reader.GetInt32(0);
+                    string nombreTrabajador = reader.GetString(1);
+                    string apellidosTrabajador = reader.GetString(2);
+
+                    // Creamos un objeto Trabajador y lo añadimos al Observable Collection
+                    Trabajador trabajador = new Trabajador
+                    {
+                        Id = idTrabajador,
+                        Nombre = nombreTrabajador,
+                        Apellidos = apellidosTrabajador,
+                    };
+
+                    // Añadimos el trabajador al Observable Collection
+                    OcTrabajadores.Add(trabajador);
+                }
+
+                reader.Close();
+                connection.Close();
+            }
+
             BindingContext = this;
         }
 
-        private void btnComprobar(object sender, EventArgs e)
-        { 
-            Contador = 0;
-
-            if (entry1.Text=="A") { Contador += 1; }
-            if (entry2.Text == "A") { Contador += 1; }
-            if (entry3.Text == "A") { Contador += 1; }
-
-            tvNumeroIdiomas.Text = "Idiomas a nivel avanzado: " + _count;
+        private void CrearTablaTrabajador(SQLiteConnection connection)
+        {
+            // Creamos la tabla Trabajador en caso de que no exista
+            // Su clave principal es un autonumérico
+            string queryCrearTablaTrabajador = "CREATE TABLE IF NOT EXISTS Trabajador (" +
+                                     "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                                     "nombre TEXT, " +
+                                     "apellidos TEXT)";
+            EjecutarNonQuery(connection, queryCrearTablaTrabajador);
         }
 
-        private async void btnInsertar1(object sender, EventArgs e)
-        {
-            
-            string result = await DisplayPromptAsync("Nivel de Valenciano", "¿Qué nivel tienes?");
-            
-            entry1.Text = result; 
-            await Task.Delay(100);
 
+
+        private void InsertarDatosEjemplo(SQLiteConnection connection)
+        {
+            EjecutarNonQuery(connection, "insert into Trabajador (nombre, apellidos) values ('Ana', 'Gómez')");
+            EjecutarNonQuery(connection, "insert into Trabajador (nombre, apellidos) values ('Juan', 'Pérez')");
         }
 
-        private async void btnInsertar2(object sender, EventArgs e)
+        private void EjecutarNonQuery(SQLiteConnection connection, string query)
         {
-            string action = await DisplayActionSheet("¿Qúé nivel de inglés tienes?", "Cancel", null, "A", "M", "B");
-            entry2.Text = action;
-            await Task.Delay(100);
-        }
+            // Este método ejecuta órdenes SQL que no devuelven consultas (Non-query command)
 
-        private async void btnInsertar3(object sender, EventArgs e)
-        {
-            string action = await DisplayActionSheet("¿Qué nivel de francés tienes?", "Cancel", "Delete", "A", "M", "B");
-            if (action=="Delete")
+            using (SQLiteCommand command = new SQLiteCommand(query, connection))
             {
-                entry3.Text = " ";
+                command.ExecuteNonQuery();
             }
-            else { entry3.Text = action; }
         }
 
-
-        private async void btnCreditos(object sender, EventArgs e)
+        private void Anyadir(object sender, EventArgs e)
         {
-            await DisplayAlert("Créditos", "Aplicación realizada por N.C.R", "OK");
+            string nombre = etNombre.Text;
+            string apellido = etApellido.Text;
+
+            string rutaDirectorioApp = System.AppContext.BaseDirectory;
+            DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);
+            directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
+            string databasePath = Path.Combine(directorioApp.FullName, "empresa.db");
+            string connectionString = $"Data Source={databasePath};Version=3;";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                // Insertar los datos en la tabla
+                string queryInsert = $"INSERT INTO Trabajador (nombre, apellidos) VALUES ('{nombre}', '{apellido}')";
+                EjecutarNonQuery(connection, queryInsert);
+
+                // Actualizar la lista en la UI
+                Trabajador nuevoTrabajador = new Trabajador
+                {
+                    Nombre = nombre,
+                    Apellidos = apellido
+                };
+                _trabajadorList.Add(nuevoTrabajador);
+
+               
+
+                connection.Close();
+            }
+
         }
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
+        private void Actualizar(object sender, EventArgs e)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            foreach (var trabajador in _trabajadorList)
+            {
+                OcTrabajadores.Add(trabajador);
+            }
+
+            _trabajadorList.Clear();
         }
+
+        private void Eliminar(object sender, EventArgs e)
+        {
+            
+        }
+
 
 
     }
-
 }
