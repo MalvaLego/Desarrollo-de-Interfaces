@@ -31,38 +31,19 @@ namespace SQLite03
             InitializeComponent();
             // Lista de los trabajadores
             OcTrabajadores = new ObservableCollection<Trabajador>();
-
-
-            // Creamos la ruta de la base de datos en el directorio de nuestro proyecto
-            // No lo haríamos en producción pero en pruebas es más cómodo
-            // tener localizada la base de datos y poder examinarla
-            // con otros programas para ver los cambios producidos
-
-            // En mi caso, devuelve:
-            // "D:\\Datos\\proyectos_DI2425\\ud04part01ExempleSQLite\\SQLite03\\bin\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\AppX\\"
+      
             string rutaDirectorioApp = System.AppContext.BaseDirectory;
-
-            DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);
-
-            // El objeto directorio será ahora:
-            // D:\Datos\proyectos_DI2425\ud04part01ExempleSQLite\SQLite03
+            DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);    
             directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
-
-            // Creamos la ruta completa del fichero de la base de datos
-            // En mi ejemplo:
-            // D:\Datos\proyectos_DI2425\ud04part01ExempleSQLite\SQLite03\empresa.db
             string databasePath = Path.Combine(directorioApp.FullName, "empresa.db");
-
-            // Creamos la cadena de conexión 
             string connectionString = $"Data Source={databasePath};Version=3;";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-                // Creamos la tabla de trabajador
+               
                 CrearTablaTrabajador(connection);
 
-                // Insertamos unos registros de ejemplo
                 InsertarDatosEjemplo(connection);
 
                 // Creamos la consulta y la ejecutamos
@@ -143,15 +124,16 @@ namespace SQLite03
                 string queryInsert = $"INSERT INTO Trabajador (nombre, apellidos) VALUES ('{nombre}', '{apellido}')";
                 EjecutarNonQuery(connection, queryInsert);
 
+                long lastId = connection.LastInsertRowId;
+
                 // Actualizar la lista en la UI
                 Trabajador nuevoTrabajador = new Trabajador
                 {
+                    Id = (int)lastId,
                     Nombre = nombre,
                     Apellidos = apellido
                 };
                 _trabajadorList.Add(nuevoTrabajador);
-
-
 
                 connection.Close();
             }
@@ -164,7 +146,6 @@ namespace SQLite03
             {
                 OcTrabajadores.Add(trabajador);
             }
-
             _trabajadorList.Clear();
         }
 
@@ -181,15 +162,15 @@ namespace SQLite03
                 using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
                     connection.Open();
-
-                    // Query SQL para eliminar el trabajador de la base de datos
+              
                     string queryDelete = "DELETE FROM Trabajador WHERE id = @id";
                     SQLiteCommand command = new SQLiteCommand(queryDelete, connection);
 
-                    // Agregar el parámetro (el ID del trabajador seleccionado)
+                    
+               
                     command.Parameters.AddWithValue("@id", TrabajadorSelected.Id);
+                   tvNombre.Text="Intentando eliminar trabajador con Id: "+TrabajadorSelected.Id;
 
-                    // Ejecutar la consulta DELETE
                     command.ExecuteNonQuery();
                 }
                 OcTrabajadores.Remove(TrabajadorSelected);
