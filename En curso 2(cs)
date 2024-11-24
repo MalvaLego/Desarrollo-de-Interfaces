@@ -88,7 +88,6 @@ namespace SQLite03
             EjecutarNonQuery(connection, queryCrearTablaTrabajador);
         }
 
-       
 
         private void InsertarDatosEjemplo(SQLiteConnection connection)
         {           
@@ -109,7 +108,18 @@ namespace SQLite03
         {
             string nombre = etNombre.Text;
             string apellido = etApellido.Text;
+         
+                Trabajador nuevoTrabajador = new Trabajador
+                {
+                    Id = 0,
+                    Nombre = nombre,
+                    Apellidos = apellido
+                };
+                _trabajadorList.Add(nuevoTrabajador);
+        }
 
+        private void Actualizar(object sender, EventArgs e)
+        {
             string rutaDirectorioApp = System.AppContext.BaseDirectory;
             DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);
             directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
@@ -120,33 +130,20 @@ namespace SQLite03
             {
                 connection.Open();
 
-                // Insertar los datos en la tabla
-                string queryInsert = $"INSERT INTO Trabajador (nombre, apellidos) VALUES ('{nombre}', '{apellido}')";
-                EjecutarNonQuery(connection, queryInsert);
-
-                long lastId = connection.LastInsertRowId;
-
-                // Actualizar la lista en la UI
-                Trabajador nuevoTrabajador = new Trabajador
+                foreach (var trabajador in _trabajadorList)
                 {
-                    Id = (int)lastId,
-                    Nombre = nombre,
-                    Apellidos = apellido
-                };
-                _trabajadorList.Add(nuevoTrabajador);
+                    string queryInsert = $"INSERT INTO Trabajador (nombre, apellidos) VALUES ('{trabajador.Nombre}', '{trabajador.Apellidos}')";
+                    EjecutarNonQuery(connection, queryInsert);
+
+                    long ultimoId = connection.LastInsertRowId;
+                    trabajador.Id = (int)ultimoId;
+
+                    OcTrabajadores.Add(trabajador);
+                }
+                _trabajadorList.Clear();
 
                 connection.Close();
-            }
-
-        }
-
-        private void Actualizar(object sender, EventArgs e)
-        {
-            foreach (var trabajador in _trabajadorList)
-            {
-                OcTrabajadores.Add(trabajador);
-            }
-            _trabajadorList.Clear();
+            }            
         }
 
         private void Eliminar(object sender, EventArgs e)
@@ -165,11 +162,8 @@ namespace SQLite03
               
                     string queryDelete = "DELETE FROM Trabajador WHERE id = @id";
                     SQLiteCommand command = new SQLiteCommand(queryDelete, connection);
-
-                    
-               
-                    command.Parameters.AddWithValue("@id", TrabajadorSelected.Id);
-                   tvNombre.Text="Intentando eliminar trabajador con Id: "+TrabajadorSelected.Id;
+              
+                    command.Parameters.AddWithValue("@id", TrabajadorSelected.Id);               
 
                     command.ExecuteNonQuery();
                 }
@@ -179,8 +173,6 @@ namespace SQLite03
             }
 
         }
-
-
 
 
 
