@@ -1,180 +1,57 @@
+using Firebase.Database;
+using Firebase.Database.Query;
 using System.Collections.ObjectModel;
-using System.Data.SQLite;
 
-namespace SQLite03
+namespace Tema2Exercici5
 {
+
     public partial class MainPage : ContentPage
     {
-        private List<Trabajador> _trabajadorList= new List<Trabajador>();
-        private ObservableCollection<Trabajador> _ocTrabajadores;
-        public ObservableCollection<Trabajador> OcTrabajadores
-        {
-            get { return _ocTrabajadores;}
-            set
-            {
-                _ocTrabajadores = value;
-                OnPropertyChanged();
-            }
-        }
-        private Trabajador _trabajadorSelected;
-        public Trabajador TrabajadorSelected
-        {
-            get { return _trabajadorSelected; }
-            set
-            {
-                _trabajadorSelected = value;
-                OnPropertyChanged();
-            }
-        }
+        int count = 0;
+        FirebaseClient firebaseClient = new FirebaseClient("https://exercici5tema2-default-rtdb.europe-west1.firebasedatabase.app/");
+        public ObservableCollection<Tasca> Tasques { get; set; } = new ObservableCollection<Tasca>();
+        
         public MainPage()
         {
             InitializeComponent();
-            // Lista de los trabajadores
-            OcTrabajadores = new ObservableCollection<Trabajador>();
-      
-            string rutaDirectorioApp = System.AppContext.BaseDirectory;
-            DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);    
-            directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
-            string databasePath = Path.Combine(directorioApp.FullName, "empresa.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-               
-                CrearTablaTrabajador(connection);
-
-                InsertarDatosEjemplo(connection);
-
-                // Creamos la consulta y la ejecutamos
-                string sql = "SELECT * FROM Trabajador";
-                SQLiteCommand command = new SQLiteCommand(sql, connection);
-                SQLiteDataReader reader = command.ExecuteReader();
-                
-                // Recorremos los registros devueltos del SELECT
-                while (reader.Read())
-                {
-                    int idTrabajador = reader.GetInt32(0);
-                    string nombreTrabajador = reader.GetString(1);
-                    string apellidosTrabajador = reader.GetString(2);
-
-                    // Creamos un objeto Trabajador y lo añadimos al Observable Collection
-                    Trabajador trabajador = new Trabajador
-                    {
-                        Id = idTrabajador,
-                        Nombre = nombreTrabajador,
-                        Apellidos = apellidosTrabajador,
-                    };
-
-                    // Añadimos el trabajador al Observable Collection
-                    OcTrabajadores.Add(trabajador);
-                }
-
-                reader.Close();
-                connection.Close();
-            }
-            
             BindingContext = this;
+            BindingContext = Tasca.Tasques;
         }
 
-        private void CrearTablaTrabajador(SQLiteConnection connection)
+        private void btnAnyadir(object sender, EventArgs e)
         {
-            // Creamos la tabla Trabajador en caso de que no exista
-            // Su clave principal es un autonumérico
-            string queryCrearTablaTrabajador = "CREATE TABLE IF NOT EXISTS Trabajador (" +
-                                     "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                                     "nombre TEXT, " +
-                                     "apellidos TEXT)";
-            EjecutarNonQuery(connection, queryCrearTablaTrabajador);
-        }
-
-
-        private void InsertarDatosEjemplo(SQLiteConnection connection)
-        {           
-            EjecutarNonQuery(connection, "insert into Trabajador (nombre, apellidos) values ('Juan', 'Pérez')");
-        }
-
-        private void EjecutarNonQuery(SQLiteConnection connection, string query)
-        {
-            // Este método ejecuta órdenes SQL que no devuelven consultas (Non-query command)
-
-            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+            if (eNombreTarea.Text != null && eNombreTarea.Text != string.Empty)
             {
-                command.ExecuteNonQuery();
-            }
-        }
-
-        private void Anyadir(object sender, EventArgs e)
-        {
-            string nombre = etNombre.Text;
-            string apellido = etApellido.Text;
-         
-                Trabajador nuevoTrabajador = new Trabajador
+                Tasca tasca = new Tasca
                 {
-                    Id = 0,
-                    Nombre = nombre,
-                    Apellidos = apellido
+                    IdTarea = string.Empty,
+                    NombreTarea = eNombreTarea.Text,
                 };
-                _trabajadorList.Add(nuevoTrabajador);
-        }
-
-        private void Actualizar(object sender, EventArgs e)
-        {
-            string rutaDirectorioApp = System.AppContext.BaseDirectory;
-            DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);
-            directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
-            string databasePath = Path.Combine(directorioApp.FullName, "empresa.db");
-            string connectionString = $"Data Source={databasePath};Version=3;";
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-
-                foreach (var trabajador in _trabajadorList)
+                string key = firebaseClient.Child("Tasques").PostAsync(tasca).Result.Key;
+                if (key != null)
                 {
-                    string queryInsert = $"INSERT INTO Trabajador (nombre, apellidos) VALUES ('{trabajador.Nombre}', '{trabajador.Apellidos}')";
-                    EjecutarNonQuery(connection, queryInsert);
-
-                    long ultimoId = connection.LastInsertRowId;
-                    trabajador.Id = (int)ultimoId;
-
-                    OcTrabajadores.Add(trabajador);
+                    firebaseClient.Child("Tasques").Child(key).PutAsync(
+                    new Tasca
+                    {
+                        IdTarea = key,
+                        NombreTarea = tasca.NombreTarea
+                    });
                 }
-                _trabajadorList.Clear();
-
-                connection.Close();
-            }            
-        }
-
-        private void Eliminar(object sender, EventArgs e)
-        {
-            if (TrabajadorSelected != null)
-            {
-                string rutaDirectorioApp = System.AppContext.BaseDirectory;
-                DirectoryInfo directorioApp = new DirectoryInfo(rutaDirectorioApp);
-                directorioApp = directorioApp.Parent.Parent.Parent.Parent.Parent.Parent;
-                string databasePath = Path.Combine(directorioApp.FullName, "empresa.db");
-                string connectionString = $"Data Source={databasePath};Version=3;";
-
-                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-                {
-                    connection.Open();
-              
-                    string queryDelete = "DELETE FROM Trabajador WHERE id = @id";
-                    SQLiteCommand command = new SQLiteCommand(queryDelete, connection);
-              
-                    command.Parameters.AddWithValue("@id", TrabajadorSelected.Id);               
-
-                    command.ExecuteNonQuery();
-                }
-                OcTrabajadores.Remove(TrabajadorSelected);
-
-                TrabajadorSelected = null;
+                eNombreTarea.Text = string.Empty;
             }
 
         }
 
+        private void btnActualizar(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnBorrar(object sender, EventArgs e)
+        {
+
+        }
 
     }
+
 }
