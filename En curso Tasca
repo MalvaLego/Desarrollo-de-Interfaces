@@ -1,15 +1,12 @@
-using Firebase.Database;
-//using Java.Security.Cert;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tema2Exercici5
+namespace Tema2Exercici5Segundo
 {
     public class Tasca : INotifyPropertyChanged
     {
@@ -34,77 +31,13 @@ namespace Tema2Exercici5
             }
         }
 
-        public static ObservableCollection<Tasca> Tasques { get; set; } = new ObservableCollection<Tasca>();
-        public Tasca()
-        {
-            FirebaseClient firebaseClient = new FirebaseClient("https://exercici5tema2-default-rtdb.europe-west1.firebasedatabase.app/");
-
-            var collection = firebaseClient
-            .Child("Tasques")
-            .AsObservable<Tasca>()
-            // Amb .Subscriu ens subscrivim als canvis en la base de dades i els afegim a la col·lecció
-            .Subscribe((item) =>
-            {
-                if (item.Object != null)
-                {
-                    // Si l'EventType d'item.Object és Delete, l'item ha sigut esborrat de la base de dades
-                    if (item.EventType == Firebase.Database.Streaming.FirebaseEventType.Delete)
-                    {
-                        var deletedItem = Tasques.FirstOrDefault(tu => tu.IdTarea == item.Key);
-                        // Podria haver-se escrit així:
-                        //var deletedItem = (from tu in Tasques
-                        // where tu.IdTarea == item.Key
-                        // select tu).SingleOrDefault();
-                        if (deletedItem != null)
-                        {
-                            // Esborrem la tasca de l'ObservableCollection perquè ja no existix
-                            // en Firebase
-                            Tasques.Remove(deletedItem);
-                        }
-                    }
-                    else
-                    // L'EventType és Insert o Update, l'item ha sigut afegit o modificat en la base de dades
-                    {
-                        // Busquem si la tasca ja existix en l'ObservableCollection
-                        var existingItem = Tasques.FirstOrDefault(tu => tu.IdTarea == item.Key);
-                        // L'item no existix en la col·lecció. Ho afegim.
-                        // S'afegiran totes les tasques de la base de dades de Firebase
-                        // en iniciar l'aplicació perquè es mostren en el CollectionView
-                        if (existingItem == null)
-                        {
-                            // Afig el nou item a la col·lecció
-                            Tasques.Add(new Tasca
-                            {
-                                NombreTarea = item.Object.NombreTarea,
-                                IdTarea = item.Key
-                            });
-                        }
-                        else
-                        {
-                            // Actualitza la propietat NombreTarea de l'item existent
-                            existingItem.NombreTarea = item.Object.NombreTarea;
-                        }
-                    }
-                }
-            });
-            
-        }
-
-
-
-
-
-
-
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-
-
-
     }
 
 }
