@@ -1,0 +1,27 @@
+namespace Tema4Exercici1BIEN.Views;
+
+
+    [QueryProperty(nameof(Tarea), "tarea")]
+
+    public partial class MainPage : ContentPage
+    {
+        private string _tarea;
+        public string Tarea
+        {
+            get => _tarea;
+            set => _tarea = value;
+        }
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        
+        private async void GoToAddTarea(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync($"AddItemNewWindow?nom={Tarea}");
+            //await Shell.Current.GoToAsync($"FormaDePago?nom={NombreCurso}&precio={Precio}");
+        }
+
+    }
