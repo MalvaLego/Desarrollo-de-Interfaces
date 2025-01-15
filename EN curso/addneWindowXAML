@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tema4Exercici1BIEN.Views.AddItemNewWindow"
+             Title="AddItemNewWindow">
+    <VerticalStackLayout>
+        <Label 
+            Text="Nueva Tarea"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry
+            Placeholder="Añade tarea"
+            />
+
+        <CheckBox
+            
+            />
+
+        <Button
+            Text="Añadir"
+            x:Name="CounterBtn"          
+            Clicked="Efectivo"
+            HorizontalOptions="Fill" />
+
+        <Button
+            
+            Text="Cancelar" 
+            Clicked="Cancelar"
+            HorizontalOptions="Fill" />
+
+    </VerticalStackLayout>
+</ContentPage>
