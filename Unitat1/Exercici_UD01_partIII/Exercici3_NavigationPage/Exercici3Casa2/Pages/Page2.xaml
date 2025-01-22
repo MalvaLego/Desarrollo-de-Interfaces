@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercici3Casa2.Pages.Page2"
+             >
+    
+    <ScrollView>
+       
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25"
+            BackgroundColor="#d5e6eb"
+            >
+            <Image
+            Margin="0,40,0,0"
+            Source="mapa_entradas.png"
+            HeightRequest="185"
+            Aspect="AspectFit"          
+             />
+
+
+            <Label
+            Text="Elija su tipo de entrada"
+            Style="{StaticResource SubHeadline}"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+            TextColor="Black"    
+            />
+
+            <Picker x:Name="pickerEntrada" SelectedIndexChanged="pTipoEntrada" BackgroundColor="White">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                    <x:String>Vip</x:String>
+                    <x:String>Pista</x:String>
+                    <x:String>Grada</x:String>
+                    <x:String>Vista Reducida</x:String>
+                    </x:Array>    
+                </Picker.ItemsSource>
+            </Picker>
+
+   
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button
+               
+                Text="Volver Atrás" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnGoBack"
+                HorizontalOptions="Start"
+                Margin="0,10,10,10"    
+                WidthRequest="150"    
+                BackgroundColor="RoyalBlue"   
+                />
+
+                <Button
+                
+                Text="Siguiente" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="btnGoPage3"
+                HorizontalOptions="End"
+                Margin="40,10,5,10"    
+                WidthRequest="150"
+                BackgroundColor="RoyalBlue"    
+                />
+            </StackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

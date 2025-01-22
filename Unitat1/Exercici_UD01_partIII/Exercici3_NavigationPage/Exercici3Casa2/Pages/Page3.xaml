@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercici3Casa2.Pages.Page3"
+   
+              BackgroundColor="AliceBlue"
+             >
+    <ScrollView>
+        <VerticalStackLayout
+     Padding="30,0"
+     Spacing="25"
+            BackgroundColor="#d5e6eb"
+            >
+
+            <Image
+         Source="tickets.png"
+         HeightRequest="185"
+         Aspect="AspectFit"
+         SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+         Text="Introduzca la cantidad de entradas deseadas"
+         Style="{StaticResource SubHeadline}"
+         SemanticProperties.HeadingLevel="Level2"
+         SemanticProperties.Description="Welcome to dot net Multi platform App U I" 
+         TextColor="Black"       
+         />
+
+            <Entry 
+                x:Name="etUnidades"
+                BackgroundColor="White"
+                Margin="50,0,50,0"
+                ></Entry>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button
+            
+             Text="Volver Atrás" 
+             SemanticProperties.Hint="Counts the number of times you click"
+             Clicked="btnGoBack"
+             HorizontalOptions="Start"
+            Margin="0,10,10,10"    
+            WidthRequest="150"    
+            BackgroundColor="RoyalBlue"   />
+
+                <Button
+             
+             Text="Siguiente" 
+             SemanticProperties.Hint="Counts the number of times you click"
+             Clicked="btnGoPage4"
+            HorizontalOptions="End"
+            Margin="40,10,5,10"    
+            WidthRequest="150"
+            BackgroundColor="RoyalBlue"  />
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

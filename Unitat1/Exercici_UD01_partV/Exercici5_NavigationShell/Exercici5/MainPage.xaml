@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercici5.MainPage"
+             Title="Datos de matrícula"
+             BackgroundColor="#d5e6eb"
+             >
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Margin="0,15,0,0"
+                Source="intro.png"
+                HeightRequest="110"
+                Aspect="AspectFit"
+               />
+
+            
+            <StackLayout Orientation="Vertical" Margin="0,-30,0,-15">
+                <Label
+                    Text="Curso"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" />
+
+                <Border WidthRequest="440"
+                        BackgroundColor="#49748e">
+                    <Label
+                    x:Name="tvCurso"
+                    Text="{Binding NombreCurso}"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" 
+                    BackgroundColor="Beige"
+                    WidthRequest="450"
+                    HeightRequest="40"
+                    FontSize="20"
+                    />
+                </Border>
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label
+                    Text="Precio Principal"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" />
+
+                <Border WidthRequest="450"
+                        BackgroundColor="#49748e">
+                    <Label
+                    x:Name="tvPrecio"
+                    Text="{Binding Precio}"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" 
+                    BackgroundColor="Beige"
+                    WidthRequest="450"
+                    HeightRequest="40"
+                    FontSize="25"
+                    />
+                </Border>
+            </StackLayout>
+
+            <Button
+                Margin="0,-22,0,0"
+                x:Name="btnCounter"
+                Text="Seleccionar Curso" 
+                Clicked="GoPage2"
+                HorizontalOptions="Center"
+                WidthRequest="290"
+                BackgroundColor="#49748e"
+                FontSize="20"
+                />   
+
+            
+            <StackLayout Orientation="Vertical">
+                <Label
+                    Text="Forma de pago"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" />
+
+                <Border WidthRequest="450"
+                        BackgroundColor="#49748e">
+                    <Label
+                    x:Name="tvFormaPago"
+                    Text="{Binding FormaPago}"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" 
+                    BackgroundColor="Beige"
+                    WidthRequest="450"
+                    HeightRequest="40"
+                    FontSize="25"
+                    />
+                </Border>
+            </StackLayout>
+
+            <Button
+                Margin="0,-22,0,0"
+                Text="Seleccionar Forma de Pago" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="GoPage3"
+                HorizontalOptions="Center" 
+                WidthRequest="290"
+                BackgroundColor="#49748e"
+                FontSize="20"
+                />
+
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+            <Button
+                Text="Calcular Precio =>" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="CalcularPrecio"
+                HorizontalOptions="Center" 
+                WidthRequest="210"
+                HeightRequest="70"
+                BackgroundColor="#49748e"
+                FontSize="22"
+                Margin="0,0,20,0"
+                />
+
+            <Border WidthRequest="120"
+                    BackgroundColor="#49748e">
+                <Label
+                    x:Name="tvCalcularPrecio"
+                     BackgroundColor="Beige"
+                     Style="{StaticResource Headline}"
+                    WidthRequest="120"
+                     SemanticProperties.HeadingLevel="Level1" 
+                    FontSize="45"
+                    />
+            </Border>
+
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

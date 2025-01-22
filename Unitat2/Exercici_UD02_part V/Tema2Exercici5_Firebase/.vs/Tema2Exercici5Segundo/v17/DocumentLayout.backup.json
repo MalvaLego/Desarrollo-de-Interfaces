@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|e:\\clase\\interfaces\\maui\\tema2exercici5segundo\\tema2exercici5segundo\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|solutionrelative:tema2exercici5segundo\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|e:\\clase\\interfaces\\maui\\tema2exercici5segundo\\tema2exercici5segundo\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|solutionrelative:tema2exercici5segundo\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|e:\\clase\\interfaces\\maui\\tema2exercici5segundo\\tema2exercici5segundo\\tasca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|solutionrelative:tema2exercici5segundo\\tasca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|e:\\clase\\interfaces\\maui\\tema2exercici5segundo\\tema2exercici5segundo\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A1DF8E87-E478-4346-B7F4-4104FDBC8D21}|Tema2Exercici5Segundo\\Tema2Exercici5Segundo.csproj|solutionrelative:tema2exercici5segundo\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\AppShell.xaml",
+              "RelativeDocumentMoniker": "Tema2Exercici5Segundo\\AppShell.xaml",
+              "ToolTip": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\AppShell.xaml",
+              "RelativeToolTip": "Tema2Exercici5Segundo\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T14:10:45.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tasca.cs",
+              "DocumentMoniker": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\Tasca.cs",
+              "RelativeDocumentMoniker": "Tema2Exercici5Segundo\\Tasca.cs",
+              "ToolTip": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\Tasca.cs",
+              "RelativeToolTip": "Tema2Exercici5Segundo\\Tasca.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T10:33:47.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Tema2Exercici5Segundo\\MainPage.xaml.cs",
+              "ToolTip": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\MainPage.xaml.cs",
+              "RelativeToolTip": "Tema2Exercici5Segundo\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T10:11:46.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Tema2Exercici5Segundo\\MainPage.xaml",
+              "ToolTip": "E:\\Clase\\Interfaces\\MAUI\\Tema2Exercici5Segundo\\Tema2Exercici5Segundo\\MainPage.xaml",
+              "RelativeToolTip": "Tema2Exercici5Segundo\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T10:11:27.832Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

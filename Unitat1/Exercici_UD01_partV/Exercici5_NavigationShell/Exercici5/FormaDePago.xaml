@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercici5.FormaDePago"
+             Title="Método de Pago"
+             BackgroundColor="#d5e6eb" 
+             >
+    <VerticalStackLayout>
+        <StackLayout Orientation="Vertical" Margin="0,30,0,0">
+            <ImageButton
+                 Source="efectivo.png"
+                 SemanticProperties.Hint="Counts the number of times you click"
+                 Clicked="Efectivo"
+                 HorizontalOptions="Center"
+                WidthRequest="245"
+                HeightRequest="200"
+                Margin="0,0,0,30"
+                />
+            <ImageButton
+                 Source="tarjeta.png"
+                 SemanticProperties.Hint="Counts the number of times you click"
+                 Clicked="Tarjeta"
+                 HorizontalOptions="Center" 
+                WidthRequest="245"
+                HeightRequest="170"
+                />
+        </StackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

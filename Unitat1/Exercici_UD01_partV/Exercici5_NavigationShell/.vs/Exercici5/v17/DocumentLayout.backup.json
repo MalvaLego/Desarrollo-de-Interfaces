@@ -1,0 +1,227 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Clase\\Interfaces\\Exercici5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\formadepago.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\formadepago.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\formadepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\formadepago.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\seleccioncurso.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\seleccioncurso.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\seleccioncurso.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\seleccioncurso.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|d:\\clase\\interfaces\\exercici5\\exercici5\\exercici5.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1C20DDBD-BB03-4036-8525-224610DE6693}|Exercici5\\Exercici5.csproj|solutionrelative:exercici5\\exercici5.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Clase\\Interfaces\\MAUI\\Exercici5\\Exercici5\\MainViewModel.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Exercici5\\MainPage.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\MainPage.xaml",
+              "RelativeToolTip": "Exercici5\\MainPage.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-22T16:03:00.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\AppShell.xaml",
+              "RelativeDocumentMoniker": "Exercici5\\AppShell.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\AppShell.xaml",
+              "RelativeToolTip": "Exercici5\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-23T10:44:34.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormaDePago.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\FormaDePago.xaml.cs",
+              "RelativeDocumentMoniker": "Exercici5\\FormaDePago.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\FormaDePago.xaml.cs",
+              "RelativeToolTip": "Exercici5\\FormaDePago.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T08:45:05.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "Exercici5\\AppShell.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\AppShell.xaml.cs",
+              "RelativeToolTip": "Exercici5\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T10:39:35.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Exercici5\\App.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\App.xaml.cs",
+              "RelativeToolTip": "Exercici5\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:53:18.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormaDePago.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\FormaDePago.xaml",
+              "RelativeDocumentMoniker": "Exercici5\\FormaDePago.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\FormaDePago.xaml",
+              "RelativeToolTip": "Exercici5\\FormaDePago.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-23T18:01:16.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Exercici5\\MainPage.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\MainPage.xaml.cs*",
+              "RelativeToolTip": "Exercici5\\MainPage.xaml.cs*",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAADkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T16:03:08.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SeleccionCurso.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\SeleccionCurso.xaml.cs",
+              "RelativeDocumentMoniker": "Exercici5\\SeleccionCurso.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\SeleccionCurso.xaml.cs",
+              "RelativeToolTip": "Exercici5\\SeleccionCurso.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T08:50:40.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SeleccionCurso.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\SeleccionCurso.xaml",
+              "RelativeDocumentMoniker": "Exercici5\\SeleccionCurso.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\SeleccionCurso.xaml",
+              "RelativeToolTip": "Exercici5\\SeleccionCurso.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-24T12:23:49.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "Exercici5\\MauiProgram.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\MauiProgram.cs",
+              "RelativeToolTip": "Exercici5\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T09:29:54.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\App.xaml",
+              "RelativeDocumentMoniker": "Exercici5\\App.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\App.xaml",
+              "RelativeToolTip": "Exercici5\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-25T16:08:07.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainViewModel.cs.cs",
+              "DocumentMoniker": "E:\\Clase\\Interfaces\\MAUI\\Exercici5\\Exercici5\\MainViewModel.cs.cs",
+              "ToolTip": "E:\\Clase\\Interfaces\\MAUI\\Exercici5\\Exercici5\\MainViewModel.cs.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAxwC4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T20:28:27.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Exercici5.csproj",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\Exercici5.csproj",
+              "RelativeDocumentMoniker": "Exercici5\\Exercici5.csproj",
+              "ToolTip": "D:\\Clase\\Interfaces\\Exercici5\\Exercici5\\Exercici5.csproj",
+              "RelativeToolTip": "Exercici5\\Exercici5.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-22T16:36:41.023Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

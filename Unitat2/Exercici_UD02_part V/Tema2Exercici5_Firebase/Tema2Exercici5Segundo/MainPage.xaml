@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tema2Exercici5Segundo.MainPage"
+             BackgroundColor="#ECEFF1"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+            <Image
+            Source="logo.png"
+            HeightRequest="120"
+            WidthRequest="120"
+            Aspect="AspectFit"
+            />
+
+            <Label
+            Text="Tareas a relizar"
+            Style="{StaticResource SubHeadline}"
+            Margin="0,-10,0,0"
+            SemanticProperties.HeadingLevel="Level2"></Label>
+
+            <Entry
+            x:Name="eNombreTarea"
+            BackgroundColor="White"
+            >
+            </Entry>
+
+
+
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button 
+                Clicked="btnAnyadir"
+                Text="Añadir"
+                Margin="0,0,30,0"
+                WidthRequest="150"  
+                    BackgroundColor="#388E3C"
+                >
+                </Button>
+                <Button 
+                Clicked="btnModificar"
+                Text="Modificar"
+                Margin="0,0,30,0"    
+                WidthRequest="150"
+                    BackgroundColor="#FF9800"
+                >
+                </Button>
+                <Button 
+                Clicked="btnBorrar"
+                Text="Borrar"
+                WidthRequest="150"  
+                    BackgroundColor="#D32F2F"
+                >
+                </Button>
+            </HorizontalStackLayout>
+
+
+
+            <CollectionView ItemsSource="{Binding Tasques}"
+             SelectionMode="Single"
+             SelectionChanged="btnMostrarSeleccion"               
+             x:Name="cvTareas"
+            WidthRequest="500"
+             >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal"
+                      Padding="10"
+                      WidthRequest="500"                               
+                      BackgroundColor="#d1ede4"
+                      >
+                            <Label Text="{Binding NombreTarea}"
+                            FontSize="15"
+                            VerticalOptions="Center" 
+                            />
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal"></VisualState>
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="#f6d49d"></Setter>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                        </StackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
