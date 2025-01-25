@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tema4Exercici1BIEN.Views.AddItemNewWindow"
+             xmlns:vm="clr-namespace:Tema4Exercici1BIEN.ViewModels"
+             Title="AddItemNewWindow"
+             BackgroundColor="#e0fcfb">
+
+    <ContentPage.BindingContext>
+        <vm:AddItemNewWindowViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Nueva Tarea"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="24"
+            TextColor="Black"/>
+
+        <Entry 
+            x:Name="etEntry"
+            Placeholder="Nombre de la tarea" 
+            Text="{Binding NuevaTarea}" 
+            BackgroundColor="White"/>
+        
+        <CheckBox 
+            x:Name="cCompletada"
+            IsChecked="{Binding CompletadaNueva}"/>
+
+        <Button
+            Text="Añadir"
+            Command="{Binding AnyadirCommand}"
+            HorizontalOptions="Fill" 
+            BackgroundColor="#1e36cd"/>
+
+        <Button
+            Margin="0,40,0,0"
+            Text="Cancelar" 
+            Command="{Binding CancelarCommand}"
+            HorizontalOptions="Fill" 
+            BackgroundColor="#1e36cd"/>
+
+    </VerticalStackLayout>
+</ContentPage>
