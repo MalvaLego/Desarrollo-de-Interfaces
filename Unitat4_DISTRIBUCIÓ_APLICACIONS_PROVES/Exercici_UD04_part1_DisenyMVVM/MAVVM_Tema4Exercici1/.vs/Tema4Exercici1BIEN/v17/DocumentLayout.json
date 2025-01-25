@@ -1,0 +1,253 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\viewmodels\\additemnewwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\viewmodels\\additemnewwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\views\\additemnewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\views\\additemnewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\views\\additemnewwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\views\\additemnewwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\views\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tema4Exercici1BIEN\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|d:\\clase\\interfaces\\maui\\tema4exercici1bien\\tema4exercici1bien\\tema4exercici1bien.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{43419FAB-EFE9-41DE-9DA8-E6939684D002}|Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj|solutionrelative:tema4exercici1bien\\tema4exercici1bien.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddItemNewWindow.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-20T16:45:14.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddItemNewWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\Views\\AddItemNewWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T17:21:32.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddItemNewWindowViewModel.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\ViewModels\\AddItemNewWindowViewModel.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\ViewModels\\AddItemNewWindowViewModel.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\ViewModels\\AddItemNewWindowViewModel.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\ViewModels\\AddItemNewWindowViewModel.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T18:14:17.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TodoItem.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Models\\TodoItem.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\Models\\TodoItem.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Models\\TodoItem.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\Models\\TodoItem.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T18:12:47.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPageViewModel.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\ViewModels\\MainPageViewModel.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\ViewModels\\MainPageViewModel.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\ViewModels\\MainPageViewModel.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\ViewModels\\MainPageViewModel.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T18:14:56.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\Views\\MainPage.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\MainPage.xaml.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\Views\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T18:10:20.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\Views\\MainPage.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Views\\MainPage.xaml",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\Views\\MainPage.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-14T18:09:39.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\AppShell.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\AppShell.xaml.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T18:31:05.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\AppShell.xaml",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\AppShell.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\AppShell.xaml",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\AppShell.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-14T18:10:02.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\App.xaml.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\App.xaml.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T17:16:15.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\App.xaml",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\App.xaml",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\App.xaml",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-21T17:16:12.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAiwEQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T16:11:17.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Tema4Exercici1BIEN.csproj",
+              "DocumentMoniker": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj",
+              "RelativeDocumentMoniker": "Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj",
+              "ToolTip": "D:\\Clase\\Interfaces\\MAUI\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj",
+              "RelativeToolTip": "Tema4Exercici1BIEN\\Tema4Exercici1BIEN.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-18T10:13:30.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Microsoft.NET.TargetFrameworkInference.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAmwKwAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-01-18T10:20:51.566Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
