@@ -1,0 +1,52 @@
+using System.Security.Cryptography.X509Certificates;
+using Testing.Models;
+
+namespace UnitTestProject
+{
+    public class UnitTest1
+    {
+        private readonly Operacions _conversor;
+	
+	public UnitTest1()
+	{
+	   	_conversor = new Operacions();
+	}
+
+[Theory]
+[InlineData("0", 32)]
+[InlineData("25", 77)]
+// [Theory] indica que el método es una teoría que se ejecutará varias veces con diferentes datos.
+// [InlineData] indica que el método se ejecutará con los datos proporcionados.
+public void ConvertirCelsiusAFahrenheit_EntradaValida_DevuelveResultadoCorrecto(string celsius, double expectedFahrenheit)
+{
+    var conversor = new ConversorTemperatura();
+    var result = conversor.ConvertirCelsiusAFahrenheit(celsius);
+    Assert.Equal(expectedFahrenheit, result);
+}
+
+[Fact]
+
+public void ConvertirCelsiusAFahrenheit_EntradaValida_DevuelveResultadoEsperado()
+{
+    // Arrange
+    string celsius = "0";
+    double valorEsperado = 32;
+
+    // Act
+    double resultado = _conversor.ConvertirCelsiusAFahrenheit(celsius);
+
+    // Assert
+    Assert.Equal(valorEsperado, resultado);
+}
+
+	[Fact]
+	public void ConvertirCelsiusAFahrenheit_ValorInferiorCeroAbsoluto_LanzaExcepcion()
+	{
+    		// Arrange
+    		string celsius = "-274";
+
+    		// Act & Assert
+    		Assert.Throws<ArgumentException>(() => _conversor.ConvertirCelsiusAFahrenheit(celsius));
+	}
+}
+}

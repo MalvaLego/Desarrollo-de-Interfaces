@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Testing.ViewModels"
+             x:Class="Testing.Views.MainPage"          
+             BackgroundColor="#e0fcfb"
+             >
+    <ContentPage.BindingContext>
+        <vm:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout
+    Padding="30,0"
+    Spacing="25"
+    Margin="0,30,0,0"
+    >
+            <Label Text="Calculadora"
+               FontSize="28"
+               HorizontalOptions="Center" 
+               TextColor="Black"/>
+            <Entry         
+        Placeholder="Num 1" 
+        Text="{Binding PrimerNumero}" 
+        BackgroundColor="White"/>
+
+            <Entry         
+        Placeholder="Num 2" 
+        Text="{Binding SegundoNumero}" 
+        BackgroundColor="White"/>
+
+            <Label
+        x:Name="tvResultado"               
+        Text="{Binding Resultado}" 
+         FontSize="30"
+         HorizontalOptions="Center"
+        />
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button
+                    x:Name="btnSumar"
+                    Text="Sumar"                 
+                    Command="{Binding SumarCommand}"
+                    Margin="0,0,15,0"
+                    WidthRequest="100"
+                    BackgroundColor="Blue"/>
+
+                <Button
+                    Text="Restar"                 
+                    Command="{Binding RestarCommand}"
+                    Margin="0,0,15,0" 
+                    WidthRequest="100"
+                    BackgroundColor="Blue"/>
+
+                <Button
+                    Text="Multiplicar"
+                    WidthRequest="100"
+                    Command="{Binding MultiplicarCommand}"
+                    Margin="0,0,15,0"                      
+                    BackgroundColor="Blue"/>
+
+                <Button
+                    Text="Dividir"                 
+                    Command="{Binding DividirCommand}"
+                    WidthRequest="100" 
+                    BackgroundColor="Blue"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
